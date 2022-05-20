@@ -1,0 +1,24 @@
+{
+    "name": "cpputest",
+    "version": "4.0",
+    "keywords": "cpputest,unit test",
+    "description": "CppUTest unit testing framework for C/C++",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/cpputest/cpputest"
+    },
+    "build": {
+        "includeDir": "include",
+        "srcDir":"src",
+        "flags": "-D CPPUTEST_USE_LONG_LONG=1 -std=c++11",
+        "srcFilter":[
+            "+<CppUTest/*.cpp>",
+            "+<CppUTestExt/*.cpp>",
+            "+<Platforms/platform.cpp>",
+            "+<Platforms/Gcc/UtestPlatform.cpp>"
+        ]
+    },
+    "dependencies":[
+        
+    ]
+}
