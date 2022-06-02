@@ -1,7 +1,7 @@
 Import("env")
 import subprocess
 
-def analysis_callback(*arg, **kwargs):
+def lizard_callback(*arg, **kwargs):
     print("Executing Analyzer")
     # print(*args)
     # print(env.Dump())/
@@ -26,8 +26,8 @@ def analysis_callback(*arg, **kwargs):
     env.Execute("lizard -Eduplicate "+ " ".join(check_folders_without_prefix))
 
 env.AddCustomTarget(
-    "analysis",
+    "lizard",
     None,
-    analysis_callback,
-    title="Analysis",
-    description="Executes Static Code Analysis")
+    lizard_callback,
+    title="Lizard",
+    description="Executes Static Code Complexity Analysis")
